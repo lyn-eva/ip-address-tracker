@@ -9,5 +9,5 @@
 @tailwind utilities;
 
 header {
-  background-image: url(/public/images/pattern-bg.png);
+  background: url(/public/images/pattern-bg.png) no-repeat;
 }

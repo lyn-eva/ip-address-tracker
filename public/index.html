@@ -24,21 +24,21 @@
   </head>
   <body>
     <div id="root"></div>
-    <div id="map" style="height: 400px"></div>
+    <div id="map" style="height: 450px"></div>
     <script>
-      var tiles = L.tileLayer(
-        "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZXhvbG90byIsImEiOiJja3l5Z3lkYmQwOTNuMnVtajhrcjdxMmJoIn0.2SbTcqjbc3DDhGYe0f7NcA",
-        {
-          maxZoom: 18,
-          attribution:
-            'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          id: "mapbox/streets-v11",
-          tileSize: 512,
-          zoomOffset: -1,
-        }
-      )
-      var map = L.map("map").addLayer(tiles).setView([51.505, -0.09], 13);
+      // var tiles = L.tileLayer(
+      //   "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZXhvbG90byIsImEiOiJja3l5Z3lkYmQwOTNuMnVtajhrcjdxMmJoIn0.2SbTcqjbc3DDhGYe0f7NcA",
+      //   {
+      //     maxZoom: 18,
+      //     attribution:
+      //       'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+      //       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      //     id: "mapbox/streets-v11",
+      //     tileSize: 512,
+      //     zoomOffset: -1,
+      //   }
+      // )
+      // var map = L.map("map").addLayer(tiles).setView([51.505, -0.09], 13);
     </script>
   </body>
 </html>
