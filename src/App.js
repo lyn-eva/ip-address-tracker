@@ -18,7 +18,6 @@ function App() {
   useEffect(() => {
     fetchData(ip).then((response) => {
       setData(response);
-      console.log(data);
     });
   }, [ip]);
 

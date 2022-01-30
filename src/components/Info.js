@@ -16,12 +16,14 @@ function Info({ data }) {
     };
   }, [data]);
 
-  const clickHandler = (e) => {
+  const clickHandler = () => {
     setInfoOpen((prevState) => !prevState);
   };
 
   return (
-    <div className="fixed z-10 left-1/2 -translate-x-1/2 w-10/12 mx-auto -translate-y-32">
+    <div className={`fixed z-10 left-1/2 -translate-x-1/2 w-10/12 mx-auto max-w-2xl -translate-y-32 origin-center ${infoOpen ? '' : 'h-7'} ${
+      addAnime ? "animate-resize" : ""
+    }`}>
       <button
         onClick={clickHandler}
         className="w-full h-7 bg-white duration-300 hover:opacity-90 rounded-md mb-2"
@@ -29,9 +31,7 @@ function Info({ data }) {
         click to close
       </button>
       <ul
-        className={`${
-          addAnime ? "animate-resize" : ""
-        } text-center font-medium bg-white  rounded-lg py-1 shadow-md duration-500 origin-top ${
+        className={`text-center font-medium bg-white  rounded-lg py-1 shadow-md duration-500 origin-top ${
           infoOpen ? "" : "scale-y-0 opacity-0"
         }`}
       >
