@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.js"],
+  content: ["./src/**/*.js", "./public/*.html"],
   theme: {
     extend: {
       colors: {
@@ -12,16 +12,21 @@ module.exports = {
       keyframes: {
         resize: {
           "0%": {
-            transform: "scale(0.9) translateY(-7rem)",
+            transform: "scale(0.9)",
           },
           "50%": {
-            transform: "scale(1.05) translateY(-7rem)",
+            transform: "scale(1.05)",
           },
           "100%": {
-            transform: "scale(1) translateY(-7rem)",
+            transform: "scale(1)",
           },
         },
       },
+    },
+  },
+  variants: {
+    extends: {
+      opacity: ["hover"],
     },
   },
   plugins: [],
