@@ -21,7 +21,7 @@ function Info({ data }) {
   };
 
   return (
-    <div className={`fixed z-10 left-1/2 -translate-x-1/2 w-10/12 mx-auto max-w-2xl -translate-y-32 origin-center ${infoOpen ? '' : 'h-7'} ${
+    <div className={`absolute z-10 left-1/2 -translate-x-1/2 w-10/12 mx-auto max-w-2xl -translate-y-32 origin-center ${infoOpen ? '' : 'h-7'} ${
       addAnime ? "animate-resize" : ""
     }`}>
       <button

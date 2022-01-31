@@ -14,17 +14,20 @@ const fetchData = async (IP) => {
 function App() {
   const [ip, setIp] = useState("");
   const [data, setData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     fetchData(ip).then((response) => {
       setData(response);
+      setIsLoading(false);
     });
   }, [ip]);
 
   return (
     <>
       <Header setIp={setIp} />
-      {data.location && (
+      {isLoading || (
         <>
           <Info data={data ? data : ""} />
           <Map
@@ -32,6 +35,12 @@ function App() {
             longitude={data.location.lng}
           />
         </>
+      )}
+      {isLoading && (
+        <div className="z-10 fixed w-full grid place-items-center top-[65vh]">
+          <div className="animate-spin w-10 h-10 border-4 border-r-gray-300 rounded-full border-gray-800"></div>
+          please wait...
+        </div>
       )}
     </>
   );
